@@ -24,11 +24,13 @@ int main()
 	me->use(0, *bob);
 	me->use(1, *bob);
 	me->unequip(0);
-	// me->unequip(1);
-	// while (MateriaSource::floor)
+	me->unequip(1);
+	// t_floor	*head;
+	// head = MateriaSource::floor;
+	// while ( head )
 	// {
-	// 	std::cout << "type is "<< MateriaSource::floor->materia->getType() << std::endl;
-	// 	MateriaSource::floor = MateriaSource::floor->next;
+	// 	std::cout << "type is "<< head->materia->getType() << std::endl;
+	// 	head = head->next;
 	// }
 	
 	delete bob;

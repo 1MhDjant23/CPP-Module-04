@@ -1,10 +1,6 @@
 #ifndef	ICHARACTER_HPP
 #define	ICHARACTER_HPP
-// #pragma once
-
 #include "AMateria.hpp"
-
-
 
 class	ICharacter
 {

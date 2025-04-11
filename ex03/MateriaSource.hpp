@@ -1,6 +1,5 @@
 #ifndef	MATERIASOURCE_HPP
 #define	MATERIASOURCE_HPP
-// #pragma	once
 
 #include "IMateriaSource.hpp"
 #include "utils.hpp"
