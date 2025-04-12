@@ -1,6 +1,8 @@
-//#include "Brain.hpp"
+#include "Brain.hpp"
 
 Brain::Brain() {
+	for (int i = 0; i < 100; i++)
+		this->ideas[i] = "NO IDEAS";
 	std::cout << "[ Braiiiiiin ]" << std::endl;
 }
 
@@ -16,16 +18,25 @@ Brain::Brain( const Brain& other ) {
 Brain&	Brain::operator=( const Brain& other ) {
 	if (this != &other)
 	{
-		for (int i = 0; i < 100; i++)
+		for ( int i = 0; i < 100; i++ )
 			this->ideas[i] = other.ideas[i];
 	}
-	return *this;	
+	return *this;
 }
 
-void	Brain::setIdeas( const std::string& idea, unsigned int i ) {
-	this->ideas[i] = idea;
+void	Brain::setIdeas( const std::string idea ) {
+	for ( int i = 0; i < 100; i++ )
+	{
+		if ( this->ideas[i].compare("NO IDEAS") == 0 ) {
+			this->ideas[i] = idea;
+			return ;
+		}
+	}	
+	std::cout << "Ooh No! can't have more ideas!?" << std::endl;
 }
 
-const	std::string&	Brain::getIdeas( unsigned int i ) const {
-	return this->ideas[i];
+std::string	Brain::getIdeas( unsigned int i ) const {
+	if ( i >= 0 && i < 100 )
+		return this->ideas[i];
+	return "EMPTY";
 }

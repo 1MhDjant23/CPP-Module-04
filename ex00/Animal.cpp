@@ -1,7 +1,11 @@
-//#include "Animal.hpp"
+#include "Animal.hpp"
 
-Animal::Animal() : type("Animal") {
+Animal::Animal() : type("Unknown") {
 	std::cout << "[ Default Base class called ]" << std::endl;
+}
+
+Animal::Animal( const std::string& type ) : type( type ) {
+	std::cout << "[ Base class called ]" << std::endl;
 }
 
 Animal::Animal( const Animal& other ) {

@@ -1,7 +1,6 @@
-//#include "Cat.hpp"
+#include "Cat.hpp"
 
-Cat::Cat() : Animal() {
-	this->type = "Cat";
+Cat::Cat() : Animal("Cat") {
 	std::cout << "Cat starting ..." << std::endl;
 }
 
@@ -10,7 +9,6 @@ Cat::~Cat() {
 }
 
 Cat::Cat( const Cat& other ) : Animal( other ) {
-	*this = other;
 	std::cout << "[ Cat Copy Constructor Called ]" << std::endl;
 }
 

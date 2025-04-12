@@ -32,7 +32,7 @@ fclean: clean
 
 re: fclean all
 
-run: re
+run: all
 	@echo "$(BGREEN)Running $(NAME)...$(RESET)"
 	@sleep 1
 	@echo "$(BYELLOW)======== OK ========$(RESET)"

@@ -1,5 +1,6 @@
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
+#include "IMateriaSource.hpp"
 
 AMateria::AMateria() : type("Materia") {}
 
@@ -27,4 +28,16 @@ void	AMateria::use( ICharacter& target ) {
 		std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 	else
 		std::cout << "* launches a " << this->type << " at " << target.getName() << " *" << std::endl;
+}
+/*===============================================*/
+
+AMateria*	Fire::clone() const 
+{
+	AMateria*	mater = new Fire();
+	return mater;
+}
+
+Fire::Fire()
+{
+	this->type = "fire";
 }

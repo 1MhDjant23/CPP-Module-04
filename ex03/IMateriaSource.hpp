@@ -13,4 +13,11 @@ class IMateriaSource
 		virtual AMateria* createMateria( std::string const & type ) = 0;
 };
 
+class	Fire : public AMateria
+{
+	public:
+		Fire();
+		AMateria*	clone() const;
+};
+
 #endif
