@@ -2,7 +2,7 @@
 #include "ICharacter.hpp"
 #include "IMateriaSource.hpp"
 
-AMateria::AMateria() : type("Materia") {}
+AMateria::AMateria() : type("Unknown") {}
 
 AMateria::AMateria( std::string const & type ) : type(type) {}
 
@@ -31,13 +31,13 @@ void	AMateria::use( ICharacter& target ) {
 }
 /*===============================================*/
 
-AMateria*	Fire::clone() const 
-{
-	AMateria*	mater = new Fire();
-	return mater;
-}
+// AMateria*	Fire::clone() const 
+// {
+// 	AMateria*	mater = new Fire();
+// 	return mater;
+// }
 
-Fire::Fire()
-{
-	this->type = "fire";
-}
+// Fire::Fire()
+// {
+// 	this->type = "fire";
+// }

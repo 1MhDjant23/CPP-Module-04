@@ -24,14 +24,14 @@ Character::~Character() {
 }
 
 Character::Character( const Character& other ) {
-	for (int i = 0; i < 4; i++)
+	for ( int i = 0; i < 4; i++ )
 		this->materia[i] = NULL;
 	*this = other;
 }
 
 Character&	Character::operator=( const Character& other ) {
 	if ( this != &other ) {
-		for (int i = 0; i < 4; i++) {
+		for ( int i = 0; i < 4; i++ ) {
 			if ( this->materia[i] != NULL )
 				delete	this->materia[i];
 			this->materia[i] = other.materia[i]->clone();

@@ -7,8 +7,7 @@ MateriaSource::MateriaSource() {
 }
 
 MateriaSource::~MateriaSource() {
-	for ( int i = 0; i < 4; i++ )
-	{
+	for ( int i = 0; i < 4; i++ ) {
 		if ( this->materia[i] )
 			delete this->materia[i];
 		this->materia[i] = NULL;
